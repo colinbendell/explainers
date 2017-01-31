@@ -121,4 +121,4 @@ Device Characteristics and User Agent sniffing is not possible to identify users
 
 ## Acknowledgments
 
-Many thanks to Nick Doyle
+Many thanks to Gunther Brunner & Nick Doyle
