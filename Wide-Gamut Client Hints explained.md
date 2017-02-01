@@ -41,7 +41,7 @@ A server wants to reduce bytes by stripping icc metadata. However, doing this to
 
 editorial: Notably, Chrome does not color correct to the display gamut but instead assumes the display is sRGB. This results in a saturated visual experience. 
 
-## Wide-Gamut with CSS4 and Media-Query4
+## Wide-Gamut with CSS Media-Query4
 
 The best solution is to serve a wide-gamut image when the user is on a wide-gamut display, and an sRGB image when the user is not on a wide-gamut display. This is just another case of responsive images, and is exactly what the element and media queries were designed to handle.
 This is also why Safari has added color-gamut media query to CSS Color Level 4.
@@ -60,6 +60,7 @@ However, to do this properly to address all the use cases it would more accurate
   <source media="(color-gamut: p3)" type="image/vnd.ms-photo" srcset="photo-wide.jxr">
   <source media="(color-gamut: p3)" type="image/jp2" srcset="photo-wide.jp2">
   <source media="(color-gamut: p3)" srcset="photo-wide.png">
+  <source media="(color-gamut: sRGB)" type="image/webp" srcset="photo-srgb-noicc.webp">
   <source media="(color-gamut: sRGB)" srcset="photo-srgb-noicc.jpg">
   <img src="photo-srgb-icc.jpg">
 </picture>
